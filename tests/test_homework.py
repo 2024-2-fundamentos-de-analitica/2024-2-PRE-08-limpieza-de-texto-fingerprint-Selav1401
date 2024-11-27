@@ -4,14 +4,14 @@ import os
 
 import pandas as pd  # type: ignore
 
-from homework import clean_data  # type: ignore
+from homework import clean_data
 
 
 def test_homework():
     """Test homework/clean_data.py"""
 
     clean_data.main(
-        "files/input.txt",
+        "files/input/input.txt",
         "files/output.txt",
     )
 
@@ -43,3 +43,4 @@ def test_homework():
     assert count.loc["AIRLINES"] == 1
     assert count.loc["ANALYTIC APPLICATIONS"] == 9
     assert count.loc["ANALYTIC MODEL"] == 10
+
